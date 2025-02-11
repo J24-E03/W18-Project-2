@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OrderTracking {
-    private Map<Integer, String> orderStatusMap = new HashMap<>();
+    private final Map<Integer, String> orderStatusMap = new HashMap<>();
     OrderManagement orderManagement = new OrderManagement();
 
     public boolean updateOrderStatus(int id, String status) {

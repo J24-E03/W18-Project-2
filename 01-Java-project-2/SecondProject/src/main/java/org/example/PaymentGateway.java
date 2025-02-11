@@ -5,11 +5,12 @@ import java.util.List;
 import java.util.Random;
 
 public class PaymentGateway {
-    private List<Payment> payments = new ArrayList<>();
-    private Random random = new Random();
+    private final ArrayList<Payment> payments = new ArrayList<>();
+    private final Random random = new Random();
 
+    // Generates a random payment ID
     public int generatePaymentId() {
-        return random.nextInt(10000); // Generates a random payment ID
+        return random.nextInt(10000);
     }
 
     public void processPayment(Payment payment) {

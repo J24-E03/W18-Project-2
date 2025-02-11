@@ -1,12 +1,13 @@
 package org.example;
 
+
 import java.util.List;
 import java.util.Scanner;
 
 
 public class Main {
     private static User loggedInUser = null;
-    private static Scanner scanner;
+    private static final Scanner scanner;
     private static OrderManagement orderManagement;
     private static ProductManagement productManagement;
     private static UserManagement userManagement;
@@ -37,23 +38,23 @@ public class Main {
                     while(loggedInUser == null) {
                         showGuestMenu();
                     }
-
                     if (loggedInUser.isAdmin(loggedInUser)) {
                         showAdminMenu();
                     } else {
                         showCustomerMenu();
                     }
+                    return;
                 }
+
             }
 
             private static void showAllProducts() {
                 List<Product> allProducts = productManagement.getProducts();
-                System.out.println("All products:");
+                System.out.println("All products: ");
 
                 for(Product product : allProducts) {
-                    System.out.println(product);
+                    System.out.println(product.getCategory());
                 }
-
             }
 
             private static void showAdminMenu() {

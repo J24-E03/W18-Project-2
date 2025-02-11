@@ -1,4 +1,5 @@
 package org.example;
+
 import java.util.*;
 import java.io.*;
 
@@ -7,7 +8,7 @@ class User {
     private String username;
     private String password;
     private String email;
-    private String AdminMail ="test1@gmail.com";
+    public final String AdminMail = "test1@gmail.com";
 
     // Constructor
     public User(int id, String username, String password, String email) {

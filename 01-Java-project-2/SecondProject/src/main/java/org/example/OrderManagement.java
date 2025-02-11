@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.*;
 
 public class OrderManagement {
-    private List<Order> orders = new ArrayList<>();
-    private static String FILE_PATH = "order.txt";
+    private final List<Order> orders = new ArrayList<>();
+    private static final String FILE_PATH = "order.txt";
 
     public OrderManagement() {
         loadOrdersFromFile();

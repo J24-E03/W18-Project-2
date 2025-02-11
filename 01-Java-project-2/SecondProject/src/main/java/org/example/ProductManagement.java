@@ -4,12 +4,14 @@ import java.util.*;
 import java.io.*;
 
 public class ProductManagement {
-    private List<Product> products = new ArrayList<>();
-    private static String FILE_PATH = "product.txt";
+    private final List<Product> products = new ArrayList<>();
+    private final static String FILE_PATH = "product.txt";
 
     public ProductManagement() {
         loadProductsFromFile();
     }
+
+
 
     public void addProduct(Product product) {
         products.add(product);
